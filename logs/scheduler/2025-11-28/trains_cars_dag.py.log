@@ -1,0 +1,93 @@
+[2025-11-28T14:35:19.028+0000] {processor.py:161} INFO - Started process (PID=496) to work on /opt/airflow/dags/trains_cars_dag.py
+[2025-11-28T14:35:19.029+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/trains_cars_dag.py for tasks to queue
+[2025-11-28T14:35:19.032+0000] {logging_mixin.py:188} INFO - [2025-11-28T14:35:19.032+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/trains_cars_dag.py
+[2025-11-28T14:35:19.143+0000] {processor.py:840} INFO - DAG(s) 'trains_cars_to_mysql', 'trains_cars_to_postgres', 'trains_cars_to_mongo' retrieved from /opt/airflow/dags/trains_cars_dag.py
+[2025-11-28T14:35:19.412+0000] {logging_mixin.py:188} INFO - [2025-11-28T14:35:19.411+0000] {override.py:1769} INFO - Created Permission View: can read on DAG:trains_cars_to_mysql
+[2025-11-28T14:35:19.425+0000] {logging_mixin.py:188} INFO - [2025-11-28T14:35:19.425+0000] {override.py:1769} INFO - Created Permission View: can delete on DAG:trains_cars_to_mysql
+[2025-11-28T14:35:19.434+0000] {logging_mixin.py:188} INFO - [2025-11-28T14:35:19.434+0000] {override.py:1769} INFO - Created Permission View: can edit on DAG:trains_cars_to_mysql
+[2025-11-28T14:35:19.454+0000] {logging_mixin.py:188} INFO - [2025-11-28T14:35:19.454+0000] {override.py:1769} INFO - Created Permission View: can read on DAG:trains_cars_to_postgres
+[2025-11-28T14:35:19.463+0000] {logging_mixin.py:188} INFO - [2025-11-28T14:35:19.462+0000] {override.py:1769} INFO - Created Permission View: can delete on DAG:trains_cars_to_postgres
+[2025-11-28T14:35:19.472+0000] {logging_mixin.py:188} INFO - [2025-11-28T14:35:19.472+0000] {override.py:1769} INFO - Created Permission View: can edit on DAG:trains_cars_to_postgres
+[2025-11-28T14:35:19.489+0000] {logging_mixin.py:188} INFO - [2025-11-28T14:35:19.489+0000] {override.py:1769} INFO - Created Permission View: can read on DAG:trains_cars_to_mongo
+[2025-11-28T14:35:19.498+0000] {logging_mixin.py:188} INFO - [2025-11-28T14:35:19.497+0000] {override.py:1769} INFO - Created Permission View: can delete on DAG:trains_cars_to_mongo
+[2025-11-28T14:35:19.506+0000] {logging_mixin.py:188} INFO - [2025-11-28T14:35:19.506+0000] {override.py:1769} INFO - Created Permission View: can edit on DAG:trains_cars_to_mongo
+[2025-11-28T14:35:19.506+0000] {logging_mixin.py:188} INFO - [2025-11-28T14:35:19.506+0000] {dag.py:3036} INFO - Sync 3 DAGs
+[2025-11-28T14:35:19.522+0000] {logging_mixin.py:188} INFO - [2025-11-28T14:35:19.522+0000] {dag.py:3058} INFO - Creating ORM DAG for trains_cars_to_mysql
+[2025-11-28T14:35:19.523+0000] {logging_mixin.py:188} INFO - [2025-11-28T14:35:19.523+0000] {dag.py:3058} INFO - Creating ORM DAG for trains_cars_to_postgres
+[2025-11-28T14:35:19.524+0000] {logging_mixin.py:188} INFO - [2025-11-28T14:35:19.524+0000] {dag.py:3058} INFO - Creating ORM DAG for trains_cars_to_mongo
+[2025-11-28T14:35:19.538+0000] {logging_mixin.py:188} INFO - [2025-11-28T14:35:19.537+0000] {dag.py:3823} INFO - Setting next_dagrun for trains_cars_to_mongo to 2025-11-28 06:30:00+00:00, run_after=2025-11-28 12:30:00+00:00
+[2025-11-28T14:35:19.542+0000] {logging_mixin.py:188} INFO - [2025-11-28T14:35:19.541+0000] {dag.py:3823} INFO - Setting next_dagrun for trains_cars_to_mysql to 2025-11-28 06:15:00+00:00, run_after=2025-11-28 12:15:00+00:00
+[2025-11-28T14:35:19.545+0000] {logging_mixin.py:188} INFO - [2025-11-28T14:35:19.545+0000] {dag.py:3823} INFO - Setting next_dagrun for trains_cars_to_postgres to 2025-11-28 06:00:00+00:00, run_after=2025-11-28 12:00:00+00:00
+[2025-11-28T14:35:19.575+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/trains_cars_dag.py took 0.552 seconds
+[2025-11-28T14:35:49.758+0000] {processor.py:161} INFO - Started process (PID=554) to work on /opt/airflow/dags/trains_cars_dag.py
+[2025-11-28T14:35:49.759+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/trains_cars_dag.py for tasks to queue
+[2025-11-28T14:35:49.763+0000] {logging_mixin.py:188} INFO - [2025-11-28T14:35:49.762+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/trains_cars_dag.py
+[2025-11-28T14:35:49.861+0000] {processor.py:840} INFO - DAG(s) 'trains_cars_to_postgres', 'trains_cars_to_mysql', 'trains_cars_to_mongo' retrieved from /opt/airflow/dags/trains_cars_dag.py
+[2025-11-28T14:35:49.907+0000] {logging_mixin.py:188} INFO - [2025-11-28T14:35:49.906+0000] {dag.py:3036} INFO - Sync 3 DAGs
+[2025-11-28T14:35:49.940+0000] {logging_mixin.py:188} INFO - [2025-11-28T14:35:49.940+0000] {dag.py:3823} INFO - Setting next_dagrun for trains_cars_to_mongo to 2025-11-28 06:30:00+00:00, run_after=2025-11-28 12:30:00+00:00
+[2025-11-28T14:35:49.948+0000] {logging_mixin.py:188} INFO - [2025-11-28T14:35:49.947+0000] {dag.py:3823} INFO - Setting next_dagrun for trains_cars_to_mysql to 2025-11-28 06:15:00+00:00, run_after=2025-11-28 12:15:00+00:00
+[2025-11-28T14:35:49.952+0000] {logging_mixin.py:188} INFO - [2025-11-28T14:35:49.952+0000] {dag.py:3823} INFO - Setting next_dagrun for trains_cars_to_postgres to 2025-11-28 06:00:00+00:00, run_after=2025-11-28 12:00:00+00:00
+[2025-11-28T14:35:49.982+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/trains_cars_dag.py took 0.230 seconds
+[2025-11-28T14:36:20.047+0000] {processor.py:161} INFO - Started process (PID=612) to work on /opt/airflow/dags/trains_cars_dag.py
+[2025-11-28T14:36:20.049+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/trains_cars_dag.py for tasks to queue
+[2025-11-28T14:36:20.052+0000] {logging_mixin.py:188} INFO - [2025-11-28T14:36:20.051+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/trains_cars_dag.py
+[2025-11-28T14:36:20.146+0000] {processor.py:840} INFO - DAG(s) 'trains_cars_to_mongo', 'trains_cars_to_mysql', 'trains_cars_to_postgres' retrieved from /opt/airflow/dags/trains_cars_dag.py
+[2025-11-28T14:36:20.188+0000] {logging_mixin.py:188} INFO - [2025-11-28T14:36:20.188+0000] {dag.py:3036} INFO - Sync 3 DAGs
+[2025-11-28T14:36:20.220+0000] {logging_mixin.py:188} INFO - [2025-11-28T14:36:20.220+0000] {dag.py:3823} INFO - Setting next_dagrun for trains_cars_to_mongo to 2025-11-28 06:30:00+00:00, run_after=2025-11-28 12:30:00+00:00
+[2025-11-28T14:36:20.228+0000] {logging_mixin.py:188} INFO - [2025-11-28T14:36:20.227+0000] {dag.py:3823} INFO - Setting next_dagrun for trains_cars_to_mysql to 2025-11-28 06:15:00+00:00, run_after=2025-11-28 12:15:00+00:00
+[2025-11-28T14:36:20.232+0000] {logging_mixin.py:188} INFO - [2025-11-28T14:36:20.231+0000] {dag.py:3823} INFO - Setting next_dagrun for trains_cars_to_postgres to 2025-11-28 06:00:00+00:00, run_after=2025-11-28 12:00:00+00:00
+[2025-11-28T14:36:20.255+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/trains_cars_dag.py took 0.214 seconds
+[2025-11-28T14:36:50.593+0000] {processor.py:161} INFO - Started process (PID=670) to work on /opt/airflow/dags/trains_cars_dag.py
+[2025-11-28T14:36:50.595+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/trains_cars_dag.py for tasks to queue
+[2025-11-28T14:36:50.598+0000] {logging_mixin.py:188} INFO - [2025-11-28T14:36:50.598+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/trains_cars_dag.py
+[2025-11-28T14:36:50.694+0000] {processor.py:840} INFO - DAG(s) 'trains_cars_to_mysql', 'trains_cars_to_mongo', 'trains_cars_to_postgres' retrieved from /opt/airflow/dags/trains_cars_dag.py
+[2025-11-28T14:36:50.734+0000] {logging_mixin.py:188} INFO - [2025-11-28T14:36:50.733+0000] {dag.py:3036} INFO - Sync 3 DAGs
+[2025-11-28T14:36:50.772+0000] {logging_mixin.py:188} INFO - [2025-11-28T14:36:50.771+0000] {dag.py:3823} INFO - Setting next_dagrun for trains_cars_to_mongo to 2025-11-28 06:30:00+00:00, run_after=2025-11-28 12:30:00+00:00
+[2025-11-28T14:36:50.780+0000] {logging_mixin.py:188} INFO - [2025-11-28T14:36:50.779+0000] {dag.py:3823} INFO - Setting next_dagrun for trains_cars_to_mysql to 2025-11-28 06:15:00+00:00, run_after=2025-11-28 12:15:00+00:00
+[2025-11-28T14:36:50.784+0000] {logging_mixin.py:188} INFO - [2025-11-28T14:36:50.783+0000] {dag.py:3823} INFO - Setting next_dagrun for trains_cars_to_postgres to 2025-11-28 06:00:00+00:00, run_after=2025-11-28 12:00:00+00:00
+[2025-11-28T14:36:50.805+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/trains_cars_dag.py took 0.218 seconds
+[2025-11-28T14:37:20.942+0000] {processor.py:161} INFO - Started process (PID=728) to work on /opt/airflow/dags/trains_cars_dag.py
+[2025-11-28T14:37:20.943+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/trains_cars_dag.py for tasks to queue
+[2025-11-28T14:37:20.946+0000] {logging_mixin.py:188} INFO - [2025-11-28T14:37:20.946+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/trains_cars_dag.py
+[2025-11-28T14:37:21.042+0000] {processor.py:840} INFO - DAG(s) 'trains_cars_to_mongo', 'trains_cars_to_mysql', 'trains_cars_to_postgres' retrieved from /opt/airflow/dags/trains_cars_dag.py
+[2025-11-28T14:37:21.090+0000] {logging_mixin.py:188} INFO - [2025-11-28T14:37:21.090+0000] {dag.py:3036} INFO - Sync 3 DAGs
+[2025-11-28T14:37:21.125+0000] {logging_mixin.py:188} INFO - [2025-11-28T14:37:21.124+0000] {dag.py:3823} INFO - Setting next_dagrun for trains_cars_to_mongo to 2025-11-28 06:30:00+00:00, run_after=2025-11-28 12:30:00+00:00
+[2025-11-28T14:37:21.133+0000] {logging_mixin.py:188} INFO - [2025-11-28T14:37:21.133+0000] {dag.py:3823} INFO - Setting next_dagrun for trains_cars_to_mysql to 2025-11-28 06:15:00+00:00, run_after=2025-11-28 12:15:00+00:00
+[2025-11-28T14:37:21.137+0000] {logging_mixin.py:188} INFO - [2025-11-28T14:37:21.137+0000] {dag.py:3823} INFO - Setting next_dagrun for trains_cars_to_postgres to 2025-11-28 06:00:00+00:00, run_after=2025-11-28 12:00:00+00:00
+[2025-11-28T14:37:21.165+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/trains_cars_dag.py took 0.229 seconds
+[2025-11-28T14:37:51.582+0000] {processor.py:161} INFO - Started process (PID=786) to work on /opt/airflow/dags/trains_cars_dag.py
+[2025-11-28T14:37:51.584+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/trains_cars_dag.py for tasks to queue
+[2025-11-28T14:37:51.588+0000] {logging_mixin.py:188} INFO - [2025-11-28T14:37:51.587+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/trains_cars_dag.py
+[2025-11-28T14:37:51.693+0000] {processor.py:840} INFO - DAG(s) 'trains_cars_to_postgres', 'trains_cars_to_mongo', 'trains_cars_to_mysql' retrieved from /opt/airflow/dags/trains_cars_dag.py
+[2025-11-28T14:37:51.739+0000] {logging_mixin.py:188} INFO - [2025-11-28T14:37:51.739+0000] {dag.py:3036} INFO - Sync 3 DAGs
+[2025-11-28T14:37:52.064+0000] {logging_mixin.py:188} INFO - [2025-11-28T14:37:52.064+0000] {dag.py:3823} INFO - Setting next_dagrun for trains_cars_to_mongo to 2025-11-28 06:30:00+00:00, run_after=2025-11-28 12:30:00+00:00
+[2025-11-28T14:37:52.072+0000] {logging_mixin.py:188} INFO - [2025-11-28T14:37:52.071+0000] {dag.py:3823} INFO - Setting next_dagrun for trains_cars_to_mysql to 2025-11-28 06:15:00+00:00, run_after=2025-11-28 12:15:00+00:00
+[2025-11-28T14:37:52.076+0000] {logging_mixin.py:188} INFO - [2025-11-28T14:37:52.076+0000] {dag.py:3823} INFO - Setting next_dagrun for trains_cars_to_postgres to 2025-11-28 06:00:00+00:00, run_after=2025-11-28 12:00:00+00:00
+[2025-11-28T14:37:52.098+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/trains_cars_dag.py took 0.523 seconds
+[2025-11-28T14:38:22.335+0000] {processor.py:161} INFO - Started process (PID=844) to work on /opt/airflow/dags/trains_cars_dag.py
+[2025-11-28T14:38:22.336+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/trains_cars_dag.py for tasks to queue
+[2025-11-28T14:38:22.339+0000] {logging_mixin.py:188} INFO - [2025-11-28T14:38:22.339+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/trains_cars_dag.py
+[2025-11-28T14:38:22.432+0000] {processor.py:840} INFO - DAG(s) 'trains_cars_to_mongo', 'trains_cars_to_postgres', 'trains_cars_to_mysql' retrieved from /opt/airflow/dags/trains_cars_dag.py
+[2025-11-28T14:38:22.475+0000] {logging_mixin.py:188} INFO - [2025-11-28T14:38:22.474+0000] {dag.py:3036} INFO - Sync 3 DAGs
+[2025-11-28T14:38:22.508+0000] {logging_mixin.py:188} INFO - [2025-11-28T14:38:22.508+0000] {dag.py:3823} INFO - Setting next_dagrun for trains_cars_to_mongo to 2025-11-28 06:30:00+00:00, run_after=2025-11-28 12:30:00+00:00
+[2025-11-28T14:38:22.519+0000] {logging_mixin.py:188} INFO - [2025-11-28T14:38:22.518+0000] {dag.py:3823} INFO - Setting next_dagrun for trains_cars_to_mysql to 2025-11-28 06:15:00+00:00, run_after=2025-11-28 12:15:00+00:00
+[2025-11-28T14:38:22.525+0000] {logging_mixin.py:188} INFO - [2025-11-28T14:38:22.525+0000] {dag.py:3823} INFO - Setting next_dagrun for trains_cars_to_postgres to 2025-11-28 06:00:00+00:00, run_after=2025-11-28 12:00:00+00:00
+[2025-11-28T14:38:22.551+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/trains_cars_dag.py took 0.222 seconds
+[2025-11-28T14:38:52.824+0000] {processor.py:161} INFO - Started process (PID=902) to work on /opt/airflow/dags/trains_cars_dag.py
+[2025-11-28T14:38:52.826+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/trains_cars_dag.py for tasks to queue
+[2025-11-28T14:38:52.829+0000] {logging_mixin.py:188} INFO - [2025-11-28T14:38:52.829+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/trains_cars_dag.py
+[2025-11-28T14:38:52.931+0000] {processor.py:840} INFO - DAG(s) 'trains_cars_to_postgres', 'trains_cars_to_mongo', 'trains_cars_to_mysql' retrieved from /opt/airflow/dags/trains_cars_dag.py
+[2025-11-28T14:38:52.970+0000] {logging_mixin.py:188} INFO - [2025-11-28T14:38:52.970+0000] {dag.py:3036} INFO - Sync 3 DAGs
+[2025-11-28T14:38:53.003+0000] {logging_mixin.py:188} INFO - [2025-11-28T14:38:53.002+0000] {dag.py:3823} INFO - Setting next_dagrun for trains_cars_to_mongo to 2025-11-28 06:30:00+00:00, run_after=2025-11-28 12:30:00+00:00
+[2025-11-28T14:38:53.010+0000] {logging_mixin.py:188} INFO - [2025-11-28T14:38:53.010+0000] {dag.py:3823} INFO - Setting next_dagrun for trains_cars_to_mysql to 2025-11-28 06:15:00+00:00, run_after=2025-11-28 12:15:00+00:00
+[2025-11-28T14:38:53.014+0000] {logging_mixin.py:188} INFO - [2025-11-28T14:38:53.014+0000] {dag.py:3823} INFO - Setting next_dagrun for trains_cars_to_postgres to 2025-11-28 06:00:00+00:00, run_after=2025-11-28 12:00:00+00:00
+[2025-11-28T14:38:53.038+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/trains_cars_dag.py took 0.221 seconds
+[2025-11-28T14:39:23.747+0000] {processor.py:161} INFO - Started process (PID=961) to work on /opt/airflow/dags/trains_cars_dag.py
+[2025-11-28T14:39:23.749+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/trains_cars_dag.py for tasks to queue
+[2025-11-28T14:39:23.752+0000] {logging_mixin.py:188} INFO - [2025-11-28T14:39:23.752+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/trains_cars_dag.py
+[2025-11-28T14:39:23.844+0000] {processor.py:840} INFO - DAG(s) 'trains_cars_to_mysql', 'trains_cars_to_mongo', 'trains_cars_to_postgres' retrieved from /opt/airflow/dags/trains_cars_dag.py
+[2025-11-28T14:39:23.885+0000] {logging_mixin.py:188} INFO - [2025-11-28T14:39:23.885+0000] {dag.py:3036} INFO - Sync 3 DAGs
+[2025-11-28T14:39:23.919+0000] {logging_mixin.py:188} INFO - [2025-11-28T14:39:23.919+0000] {dag.py:3823} INFO - Setting next_dagrun for trains_cars_to_mongo to 2025-11-28 06:30:00+00:00, run_after=2025-11-28 12:30:00+00:00
+[2025-11-28T14:39:23.927+0000] {logging_mixin.py:188} INFO - [2025-11-28T14:39:23.927+0000] {dag.py:3823} INFO - Setting next_dagrun for trains_cars_to_mysql to 2025-11-28 06:15:00+00:00, run_after=2025-11-28 12:15:00+00:00
+[2025-11-28T14:39:23.931+0000] {logging_mixin.py:188} INFO - [2025-11-28T14:39:23.931+0000] {dag.py:3823} INFO - Setting next_dagrun for trains_cars_to_postgres to 2025-11-28 06:00:00+00:00, run_after=2025-11-28 12:00:00+00:00
+[2025-11-28T14:39:24.229+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/trains_cars_dag.py took 0.489 seconds
