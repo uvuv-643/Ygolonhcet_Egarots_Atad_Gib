@@ -75,7 +75,7 @@ class TrainParserHandler(BaseHTTPRequestHandler):
 
 
 def run_server(port=8888):
-    server_address = ('', port)
+    server_address = ('0.0.0.0', port)
     httpd = HTTPServer(server_address, TrainParserHandler)
     print(f"Train parser server running on port {port}")
     print(f"Access at http://localhost:{port}")

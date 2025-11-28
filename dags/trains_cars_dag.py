@@ -200,84 +200,39 @@ default_args = {
 
 
 with DAG(
-    dag_id="trains_cars_to_postgres",
+    dag_id="trains_cars",
     default_args=default_args,
-    description="Загрузка информации о вагонах в ODS (PostgreSQL)",
+    description="Загрузка информации о вагонах во все БД (PostgreSQL, MySQL, MongoDB)",
     start_date=datetime(2025, 1, 1),
-    schedule_interval="0 */6 * * *",
+    schedule_interval="10,25,40,55 * * * *",  # Каждые 15 минут, начиная с 10:00
     catchup=False,
     max_active_runs=1,
-    tags=["trains", "cars", "ods", "postgres"],
-) as dag_postgres:
-    extract_pg = PythonOperator(
+    tags=["trains", "cars", "ods", "all-databases"],
+) as dag:
+    extract = PythonOperator(
         task_id="extract_cars",
         python_callable=extract_cars,
     )
     
-    transform_pg = PythonOperator(
+    transform = PythonOperator(
         task_id="transform_cars",
         python_callable=transform_cars,
     )
     
-    load_pg = PythonOperator(
-        task_id="load_cars_to_postgres",
+    load_postgres = PythonOperator(
+        task_id="load_to_postgres",
         python_callable=load_cars_to_postgres,
     )
     
-    extract_pg >> transform_pg >> load_pg
-
-
-with DAG(
-    dag_id="trains_cars_to_mysql",
-    default_args=default_args,
-    description="Загрузка информации о вагонах в ODS (MySQL)",
-    start_date=datetime(2025, 1, 1),
-    schedule_interval="15 */6 * * *",
-    catchup=False,
-    max_active_runs=1,
-    tags=["trains", "cars", "ods", "mysql"],
-) as dag_mysql:
-    extract_mysql = PythonOperator(
-        task_id="extract_cars",
-        python_callable=extract_cars,
-    )
-    
-    transform_mysql = PythonOperator(
-        task_id="transform_cars",
-        python_callable=transform_cars,
-    )
-    
     load_mysql = PythonOperator(
-        task_id="load_cars_to_mysql",
+        task_id="load_to_mysql",
         python_callable=load_cars_to_mysql,
     )
     
-    extract_mysql >> transform_mysql >> load_mysql
-
-
-with DAG(
-    dag_id="trains_cars_to_mongo",
-    default_args=default_args,
-    description="Загрузка информации о вагонах в ODS (MongoDB)",
-    start_date=datetime(2025, 1, 1),
-    schedule_interval="30 */6 * * *",
-    catchup=False,
-    max_active_runs=1,
-    tags=["trains", "cars", "ods", "mongo"],
-) as dag_mongo:
-    extract_mongo = PythonOperator(
-        task_id="extract_cars",
-        python_callable=extract_cars,
-    )
-    
-    transform_mongo = PythonOperator(
-        task_id="transform_cars",
-        python_callable=transform_cars,
-    )
-    
     load_mongo = PythonOperator(
-        task_id="load_cars_to_mongo",
+        task_id="load_to_mongo",
         python_callable=load_cars_to_mongo,
     )
     
-    extract_mongo >> transform_mongo >> load_mongo
+    # Extract -> Transform -> Load (параллельно во все БД)
+    extract >> transform >> [load_postgres, load_mysql, load_mongo]
