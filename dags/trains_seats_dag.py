@@ -14,8 +14,8 @@ from urllib.parse import quote
 
 
 def extract_seats(**context):
-    url = Variable.get("TRAIN_URL", default_var="https://travel.yandex.ru/trains/moscow--saint-petersburg/?when=2025-11-28")
-    server_url = Variable.get("TRAIN_SERVER_URL", default_var="http://host.docker.internal:8888")
+    url = Variable.get("TRAIN_URL", default_var="https://travel.yandex.ru/trains/moscow--saint-petersburg/?when=2025-11-30")
+    server_url = Variable.get("TRAIN_SERVER_URL", default_var="http://localhost:8888")
     
     encoded_url = quote(url, safe='')
     response = requests.get(f"{server_url}/?url={encoded_url}&num_trains=3", timeout=300)
