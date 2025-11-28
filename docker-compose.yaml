@@ -126,6 +126,9 @@ services:
       <<: *airflow-common-depends-on
       airflow-init:
         condition: service_completed_successfully
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
 
   airflow-scheduler:
     <<: *airflow-common
@@ -141,6 +144,9 @@ services:
       <<: *airflow-common-depends-on
       airflow-init:
         condition: service_completed_successfully
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
 
   airflow-worker:
     <<: *airflow-common
@@ -164,6 +170,9 @@ services:
       <<: *airflow-common-depends-on
       airflow-init:
         condition: service_completed_successfully
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
 
   airflow-triggerer:
     <<: *airflow-common
@@ -179,6 +188,9 @@ services:
       <<: *airflow-common-depends-on
       airflow-init:
         condition: service_completed_successfully
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
 
   airflow-init:
     <<: *airflow-common
@@ -244,6 +256,9 @@ services:
     user: "0:0"
     volumes:
       - ${AIRFLOW_PROJ_DIR:-.}:/sources
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
 
   airflow-cli:
     <<: *airflow-common
@@ -257,6 +272,9 @@ services:
       - bash
       - -c
       - airflow
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
 
   # You can enable flower by adding "--profile flower" option e.g. docker-compose --profile flower up
   # or by explicitly targeted on the command line e.g. docker-compose up flower.
@@ -279,6 +297,9 @@ services:
       <<: *airflow-common-depends-on
       airflow-init:
         condition: service_completed_successfully
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
 
  # ODS в MySQL
   mysql_ods:
