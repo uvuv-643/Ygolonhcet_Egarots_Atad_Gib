@@ -281,4 +281,3 @@ with DAG(
     )
     
     extract_mongo >> transform_mongo >> load_mongo
-
