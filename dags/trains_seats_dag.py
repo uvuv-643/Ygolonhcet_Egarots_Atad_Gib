@@ -131,6 +131,21 @@ def load_seats_to_mysql(**context):
     conn = hook.get_conn()
     cur = conn.cursor()
     
+    # Устанавливаем кодировку для соединения
+    cur.execute("SET NAMES utf8mb4 COLLATE utf8mb4_unicode_ci")
+    cur.execute("SET CHARACTER SET utf8mb4")
+    
+    # Проверяем существование таблицы и изменяем кодировку, если нужно
+    cur.execute("""
+        SELECT COUNT(*) FROM information_schema.tables 
+        WHERE table_schema = DATABASE() AND table_name = 'ods_trains_seats_mysql'
+    """)
+    table_exists = cur.fetchone()[0] > 0
+    
+    if table_exists:
+        # Изменяем кодировку существующей таблицы
+        cur.execute("ALTER TABLE ods_trains_seats_mysql CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci")
+    
     cur.execute(
         """
         CREATE TABLE IF NOT EXISTS ods_trains_seats_mysql (
@@ -144,7 +159,7 @@ def load_seats_to_mysql(**context):
             is_cheapest BOOLEAN,
             is_upper_average BOOLEAN,
             raw JSON
-        );
+        ) DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
         """
     )
     
